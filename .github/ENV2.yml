@@ -8,7 +8,7 @@ jobs:
  
     env:
       username: sai
-      password: secrets.APP_KEY
+      password: secrets.Local_app
  
     steps:
     - name: Checkout repository
@@ -17,5 +17,5 @@ jobs:
     - name: print the environments
       run: |
         echo "the username is ${{env.username}}"
-        echo "the password is ${{secrets.APP_KEY}}"
+        echo "the password is ${{secrets.Local-app}}"
  
