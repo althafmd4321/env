@@ -1,0 +1,21 @@
+name: Java CI
+ 
+on: [push]
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+ 
+    env:
+      username: sai
+      password: secrets.APP_KEY
+ 
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+ 
+    - name: print the environments
+      run: |
+        echo "the username is ${{env.username}}"
+        echo "the password is ${{secrets.APP_KEY}}"
+ 
