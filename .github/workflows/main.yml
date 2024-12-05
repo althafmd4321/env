@@ -1,0 +1,21 @@
+name: Java CI
+ 
+on: [push]
+ 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+ 
+    env:
+      username: althaf
+      password: secrets.Local_app
+ 
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+ 
+    - name: print the environments
+      run: |
+        echo "the username is ${{env.username}}"
+        echo "the password is ${{secrets.Local_app}}"
+ 
